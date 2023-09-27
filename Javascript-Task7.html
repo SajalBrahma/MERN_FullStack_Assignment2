@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 7</title>
+    <style>
+        #image{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        body,html{
+            text-align: center;
+        }
+        button:hover{
+            background-color: aquamarine;
+        }
+        button{
+            border-radius: 25px;
+            font-size:large;
+        }
+        h1{
+            color:blue;
+        }
+        @keyframes moveRight {
+            0%{
+                left:0;
+            }
+            100%{
+                left:calc(100% - 200px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="./car.png" id="image">
+    <h1>Click the following buttons to handle animation</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        var animation;
+        function start(){
+            var image=document.getElementById('image');
+            image.style.animationName='moveRight';
+            image.style.animationPlayState='running';
+        }
+        function stop(){
+            var image=document.getElementById('image');
+            image.style.animationPlayState='paused';
+        }
+    </script>
+</body>
+</html>

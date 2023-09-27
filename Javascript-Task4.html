@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 4</title>
+    <style>
+        body,html{
+            text-align: center;
+        }
+        button:hover{
+            color:blue;
+        }
+        button{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Date & Time Display</h1>
+    <div>
+        <label style="font-size: 20px;">Chick to display date : </label>
+        <button onclick="showdate()" id="button1" style="font-size: 20px;">show date</button>
+        <p id="fun1"></p>
+        <br>
+        <label style="font-size: 20px;">Click to display time : </label>
+        <button onclick="showtime()" id="button2" style="font-size: 20px;">show Time</button>
+        <p id="fun2"></p>
+    </div>
+    <script  style="font-size: 20px;">
+        function showdate() {
+            const now = new Date();
+            const formatedDate = now.toLocaleDateString('en-US', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+            document.getElementById("fun1").textContent = formatedDate;
+        }
+        function showtime() {
+            const now = new Date();
+            document.getElementById("fun2").textContent = now;
+        }
+    </script>
+</body>
+
+</html>

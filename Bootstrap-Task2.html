@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Task 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .outer-box{
+            background-color: rgb(219, 214, 214);
+        }
+        .inner-box{
+            padding-left: 60px;
+            padding-right: 60px;
+            height: 163px;
+        }
+        .icon{
+            font-size: 50px;
+        }
+        .inner1{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .set-border{
+            border: 1px solid white;
+        }
+        .set-center{
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-part {
+            background-image: url(image.jpg);
+            background-size: cover;
+            background-position: center;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-top: 0px;
+            height: 500px;
+            position: relative;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); 
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            z-index: 1;
+        }
+        .row{
+            margin-right: 60px;
+            margin-left: 60px;
+        }
+        .logo1{
+            color: rgb(201, 155, 29);
+            font-size: 50px;
+
+        }
+        .logo2{
+            color: black;
+            font-size: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer-box">
+        <div class="inner-box">
+            <nav class="navbar bg-warning" style="padding-top: 5px; padding-bottom: 0px; padding-left: 60px; padding-right: 60px;">
+                <div>
+                    <p style="font-size: 50px; font-weight: bold; margin-bottom: 0px;">Builderz</p>
+                </div>
+
+                <div class="nav" style="margin-left: 280px;">
+    
+                    <i class="fas fa-clock icon"></i>
+                    <p style="padding-left: 10px; padding-right: 127px;">Opening Hour<br>Mon-Fri, 8:00-9:00</p>
+                    <i class="fas fa-phone icon"></i>
+                    <p style="padding-left: 10px; padding-right: 70px;">Call us<br>+012 345 6789</p>
+                    <i class="fas fa-envelope icon"></i>
+                    <p style="padding-left: 10px;">Email Us<br>info@example.com</p>
+                </div>
+                <br>
+            </nav>
+            <nav class="navbar bg-warning">
+                <div class="inner1">
+                    <div class="navbar bg-dark">   
+                        <a href="#" class="nav-item nav-link" style="color: rgb(201, 155, 29);">HOME</a>
+                        <a href="#" class="nav-item nav-link" style="color: white;">ABOUT</a>
+                        <a href="#" class="nav-item nav-link" style="color: white;">SERVICE</a>
+                        <a href="#" class="nav-item nav-link" style="color: white;">TEAM</a>
+                        <a href="#" class="nav-item nav-link" style="color: white;">PROJECT</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: white;">PAGES</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Page 1</a>
+                                <a href="#" class="dropdown-item">Page 2</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link" style="color: white;">CONTACT</a>
+                        <a href="#" class="nav-link nav-item set-border" style="color: white; margin-left: 480px; margin-right: 20px; margin-bottom: 10px; margin-top: 10px;">Get a Quote</a>            
+                    </div>                  
+                </div>
+            </nav>        
+        </div>
+        <div class="main-part">
+            <div class="overlay">
+                <div class="container">
+                    <p class="text-center" style="font-size: 30px; padding: 0px; color: white;">We are Professionals</p>
+                    <p class="text-center" style="font-size: 50px; font-weight: bolder; color: white;">For your Dream Project</p>
+                    <a href="#" class="nav-link text-center set-center" style="border: 2px solid white; margin-left: 580px;  color: white; padding-left: 30px; padding-right: 30px;">GET A QUOTE</a>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-12 col-lg-1 bg-dark" style="padding-top: 60px; padding-left: 50px;"><i class="fas fa-user logo1"></i></div>
+            <div class="col-12 col-lg-3 bg-dark" style="color: rgb(201, 155, 29);">
+                <p style="font-size: 20px; padding-top: 20px; font-weight: bold;">Expert Worker</p>
+                <p style="margin: 0;">Lorem ipsum dolor sit amet<br>elit.Phasus nec pretim arnare<br>velit non</p>
+            </div>
+
+            <div class="col-12 col-lg-1 bg-warning" style="padding-top: 60px; padding-left: 50px;"><i class="fas fa-building logo2"></i></div>
+            <div class="col-12 col-lg-3 bg-warning text-dark" >
+                <p style="font-size: 20px; padding-top: 20px; font-weight: bold;">Quality Work</p>
+                <p style="margin: 0;">Lorem ipsum dolor sit amet<br>elit.Phasus nec pretim arnare<br>velit non</p>
+            </div>
+
+            <div class="col-12 col-lg-1 bg-dark" style="padding-top: 60px; padding-left: 50px;"><i class="fas fa-headset logo1"></i></div>
+            <div class="col-12 col-lg-3 bg-dark" style="color: rgb(201, 155, 29);" >
+                <p style="font-size: 20px; padding-top: 20px; font-weight: bold;">24/7 Support</p>
+                <p style="margin: 0;">Lorem ipsum dolor sit amet<br>elit.Phasus nec pretim arnare<br>velit non</p>
+            </div>
+            
+        </div>  
+    </div>
+</body>
+</html>

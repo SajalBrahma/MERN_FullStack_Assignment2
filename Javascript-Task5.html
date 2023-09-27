@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 5</title>
+    <style>
+        .error {
+            color: red;
+        }
+        div,
+        body,
+        html {
+            text-align: center;
+        }
+
+        form {
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 400px;
+            padding: 7px;
+            height: 200px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div>
+            <form name="myform" onsubmit="return validate()">
+                <label for="name" id="n1">Name: </label>
+                <input name="name" id="m1">
+                <span id="nameError" class="error"></span>
+                <br>
+                <br>
+                <label for="Email" id="n2">Email: </label>
+                <input name="Email" id="m2" type="email">
+                <span id="emailError" class="error"></span>
+                <br>
+                <br>
+                <label for="website" id="n3">Website: </label>
+                <input name="website" id="m3">
+                <span id="weberror" class="error"></span>
+                <br>
+                <br>
+                <label for="Message" id="n4">Message: </label>
+                <input name="Message" id="m4">
+                <span id="msgserror" class="error"></span>
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+            function validate() {
+                var x = document.getElementById("m1").value;
+                var nameError = document.getElementById("nameError");
+                nameError.innerHTML = "";
+    
+                var y = document.getElementById("m2").value;
+                var emailError = document.getElementById("emailError");
+                emailError.innerHTML = "";
+    
+                var z = document.getElementById("m3").value;
+                var weberror = document.getElementById("weberror");
+                weberror.innerHTML = "";
+    
+                var a = document.getElementById("m4").value;
+                var msgerror = document.getElementById("msgserror");
+                msgerror.innerHTML = "";
+    
+                var errors = [];
+    
+                if (x === "") {
+                    errors.push("Name field is required.");
+                    nameError.innerHTML = "Name field is required.";
+                }
+    
+                if (y === "") {
+                    errors.push("A valid email address is required.");
+                    emailError.innerHTML = "A valid email address is required.";
+                }
+    
+                if (z === "") {
+                    errors.push("A valid URL is required.");
+                    weberror.innerHTML = "A valid URL is required.";
+                }
+    
+                if (a === "") {
+                    errors.push("This field is required.");
+                    msgerror.innerHTML = "This field is required.";
+                }
+    
+                if (errors.length > 0) {
+                    return false;
+                }
+    
+                return true;
+            }
+        </script>
+    </center>  
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Task 5</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form{
+            background-color: rgb(241, 236, 236);
+            margin-top: 30px;
+            margin-right: 400px;
+            margin-left: 400px;
+            padding-left: 20px;
+        }
+        .text{
+            font-size: 20px;
+        }
+        body{
+            padding-top: 40px;
+            
+        }
+        button{
+            width: 600px;
+            background-color: rgb(218, 71, 71);
+            font-size: 30px;
+            color: white;
+            border-radius: 5px;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <table class="form">
+            <div style="width: 600px;">
+                <label for="Name" class="form-label text"><b>Name</b></label>
+                <div class="input-group">
+                    <input type="text" class="form-control is-invalid" id="Name" name="Name" placeholder="Name" required>
+                    <div class="invalid-feedback text">
+                        Name is required.
+                    </div>
+                </div>
+                <br>
+                <label for="email" class="form-label text"><b>Email</b></label>
+                <div class="input-group">
+                    <input type="email" class="form-control is-invalid" id="email" name="email" placeholder="Email" required>
+                    <div class="invalid-feedback text">
+                        Email address is required.
+                    </div>
+                </div>
+                <br>
+                <label for="password" class="form-label text"><b>Name</b></label>
+                <div class="input-group">
+                    <input type="text" class="form-control is-invalid" id="password" name="password" placeholder="Password" required>
+                    <div class="invalid-feedback text">
+                        Password is required.
+                    </div>
+                </div>
+                <br>
+                <label for="hobbies" class="form-label text"><b>Hobbies</b></label>
+                <div class="input-group">
+                    <input type="text" class="form-control is-invalid" id="hobby" name="hobby" placeholder="Hobby" required>
+                </div>
+                <br>
+                <button type="submit">SUBMIT</button>
+            </div>
+        </table>
+    </div>   
+</body>
+</html>

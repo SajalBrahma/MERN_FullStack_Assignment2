@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .structure {
+            width: 100%;
+        }
+        .button-container {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="structure">
+            <tr>
+                <td>
+                    <label for="num1" style="font-size: 20px;">1st Number : </label>
+                    <input name="num1" style="font-size: 20px;" id="n1" type="number" placeholder="Enter 1st number" required>
+                </td>
+            </tr>
+            <tr>
+                <td><br>
+                    <label for="num2" style="font-size: 20px;">2nd Number : </label>
+                    <input name="num2" style="font-size: 20px;" id="n2" type="number" placeholder="Enter 2nd number" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="button-container" style="padding-top: 30px;">
+                    <button onclick="multiply()" style="font-size: 20px;">Multiply</button>
+                    <button onclick="divide()" style="font-size: 20px;">Divide</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="button-container" style="font-size: 20px;">
+                    The Result is :
+                    <p id="Result" style="display: inline-block;"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function multiply() {
+            const a = document.getElementById("n1").value;
+            const b = document.getElementById("n2").value;
+            const c = a * b;
+            document.getElementById("Result").textContent = c;
+        }
+        function divide() {
+            const a = document.getElementById("n1").value;
+            const b = document.getElementById("n2").value;
+            if (b === 0) {
+                document.getElementById("Result").textContent = "Cannot divide by zero";
+            } else {
+                const c = a / b;
+                document.getElementById("Result").textContent = c;
+            }
+        }
+    </script>
+</body>
+
+</html>
